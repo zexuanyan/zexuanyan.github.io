@@ -1,3 +1,9 @@
+# notes 
+1. To enable news, selected_paper, lastest post and stuff, please go to about.md at around line 13
+
+1. Publicatiton is disabled rn, to re-enable it, go to publications.md and change line 6 to true;
+  1. Similar process goes for other pages
+
 # al-folio
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [maintainers]: https://img.shields.io/badge/maintainers-4-success.svg 'Number of maintainers'
