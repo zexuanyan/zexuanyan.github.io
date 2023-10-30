@@ -1,8 +1,8 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: As a relentless learner, I personally believe that doing hands-on work with projects is the best way to learn new skills! Here are some of the projects I did in the past.
 nav: true
 nav_order: 2
 display_categories: [Technical, Leadership]
