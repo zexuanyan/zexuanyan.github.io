@@ -7,23 +7,7 @@ importance: 1
 category: Technical
 ---
 
-For my honors lab project, my team made a VGA driver out of breadboards and TTL chips. If you are interested in the technical details, you can find the full lab report <a href = assets/img/VGA_Driver_Cover.jpg attributes-list download > here </a>  
-
-<!-- <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div> -->
-<!-- <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div> -->
-
+For my honors lab project, my team made a VGA driver out of breadboards and TTL chips. If you are interested in the technical details, you can find the full lab report [here](assets/pdf/SP23_Honors_Lab_Final_Reports.pdf).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
