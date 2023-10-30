@@ -1,9 +1,9 @@
 ---
 layout: cv
 permalink: /work_experience/
-title: work experience
+title: Work Experiences
 nav: true
-nav_order: 4
+nav_order: 3
 cv_pdf: ZexuanYan_Resume.pdf
-description: This is a description of the page. You can modify it in 'pages/_cv.md'. You can also change or remove the top pdf download button.
+description: Here are my work experiences. My resume can be found on the top left corner of this page!
 ---
