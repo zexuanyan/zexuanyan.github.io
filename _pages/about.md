@@ -20,4 +20,4 @@ Hello! I am an undergraduate student studying Computer Engineering at the Univer
 
 My interest mainly lies in computer architecture, electrical hardware (MCUs, PCBs, etc.) design, and high performance computing. I love learning new things through hands-on work, and I believe doing projects is one of the best ways to learn! Checkout the Project Tab to see all projects I've done! Other than that, I really enjoy playing electrical guitar, cooking (as demostrated on the right), and baking desserts!
 
-(This website is currently under construction. More infomation about me will be available in the near future!)
+(This website is currently under construction. If you see any infomation that seems irrelevant or about Einstein, that means it is not updated yet. More infomation about me will be available in the near future!)
