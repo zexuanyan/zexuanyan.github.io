@@ -1,23 +1,3 @@
----
-layout: page
-title: TTL Chip-Based VGA Driver
-description: A Breadboard-based VGA Driver that supports live-editing of the image displayed on the monitor.
-img: assets/img/VGA_Driver_Cover.jpg
-importance: 1
-category: Technical
----
-
-For my honors lab project, my team made a VGA driver out of breadboards and TTL chips. If you are interested in the technical details, you can find the full lab report [here](assets/pdf/SP23_Honors_Lab_Final_Reports.pdf).
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/VGA_Driver_Cover.jpg" title="VGA Driver Cover" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    VGA Driver Displaying Uninitialized Data in the SRAM
-</div>
-
 You can also put regular text between your rows of images.
 Say you wanted to write a little bit about your project before you posted the rest of the images.
 You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
