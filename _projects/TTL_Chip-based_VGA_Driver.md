@@ -7,7 +7,9 @@ importance: 1
 category: Technical
 ---
 
-For my ECE 110/120 Honors Lab project, my team made a VGA driver out of breadboards and TTL chips. If you are interested in the technical details, you can find the full lab report [here](../../assets/pdf/SP23_Honors_Lab_Final_Reports.pdf). In this post, I will give you a quick rundown of what this project is about! Please refer to the lab report for detailed explaination. Credit of this project also goes to my teammates Phillip Chen (pxchen2@illinois.edu), Tony Liu (zikunl2@illinois.edu), and Hanwen Zhang (hanwenz7@illinois.edu).
+For my ECE 110/120 Honors Lab project, my team made a VGA driver out of breadboards and TTL chips. In this post, I will give you a quick rundown of what this project is about! 
+
+Please note that this page works as a summary of the project and doesn't include all the information about this project. If you are interested in the technical details, please refer to the [report](../../assets/pdf/SP23_Honors_Lab_Final_Reports.pdf) for detailed explaination. Credit of this project also goes to my teammates Phillip Chen (pxchen2@illinois.edu), Tony Liu (zikunl2@illinois.edu), and Hanwen Zhang (hanwenz7@illinois.edu).
 
 <img class="center-fit" src="../../assets/img/TTL_VGA_Project/VGA_Driver_Cover.jpg"/>
 <div class="caption">
@@ -73,15 +75,30 @@ The size of each sections are determined by the signal resolution. For example, 
 
 <img class="center-fit" src="../../assets/img/TTL_VGA_Project/vga_timing.png"/>
 <div class="caption">
-    Figure 7: VGA Signal Area
+    Figure 7: VGA Timing Specification
 </div>    
 
-To simplify our project, we generated a 800 x 600 @ 60Hz signal but cut the width to 200, leading to the timing shown in Figure 8:
+To simplify our project, we generated a 800 x 600 @ 60Hz signal but cut the width to 200, leading to the horizontal and vertical timing shown in Figure 8 and 9, respectively:
 
-<img class="center-fit" src="../../assets/img/TTL_VGA_Project/modified_vga_timing.png"/>
+<img class="center-fit" src="../../assets/img/TTL_VGA_Project/modified_vga_horizontal_timing.png"/>
 <div class="caption">
-    Figure 7: VGA Signal Area
+    Figure 8: Modified VGA Horizontal Timing
 </div> 
+
+<img class="center-fit" src="../../assets/img/TTL_VGA_Project/modified_vga_vertical_timing.png"/>
+<div class="caption">
+    Figure 9: Modified VGA Vertical Timing
+</div> 
+
+As long as the horizontal and vertical sync pulses matches the timing specification shown in Figure 7, the monitor will recognize it as a valid VGA signal.
+
+## 2.5 Video Memory
+The video memory, as the name suggests, stores the content to display on the monitor. Sadly, we weren't able to find any avaliable dual port memory chip that would easily fit on a breadboard, so we went for single port SRAM as our video memory.
+
+# 3. VGA Signal Generation
+A simple way to generate a VGA signal that matches the timing specification mentioned above is with counters. A binary counter (We specifically used SN74LS161A) simply counts up in binary representation (0000, 0001, 0010, and so on) when given a clock signal. We used NAND gates to detect if we should toggle the sync pulses at the correct pixel and applied two flip-flops to actually toggle the sync pulses.
+
+For example, to match the horizontal timing requirements, we would have four 8-input NAND gates to detect if the current pixel is in the Visible Area (pixel 0 - 199), Front Porch (pixel 200 - 209), Sync Pulse (pxel 210 - 241), or Back Porch (pixel 242 - 263). At pixel 210, a flip-flop will be toggled and toggled again at pixel 241 to generate the horizontal sync pulse. The counters will reset after it reaches 264 and start counting from 0 up again as it finishes a whole line. The detailed schematics can be found in Figure 7 and Figure 8 in the lab report.
 
 <style>
     .center-fit {
