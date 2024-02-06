@@ -130,8 +130,35 @@ All of the work to this point was done in my first semester (Fall 2022). At the 
 </div> 
 
 ## 4.2 Video Memory with Input and Output
+We did manage to interact with the memory through the Arduino and were able to read from the memory, clear the screen, and set the screen to solid colors. The cover of this page (Figure 1) shows the circuit displaying uninitialized memory content from the SRAM as the SRAM does not save its memory content after power cycles.
 
+However, we met some challenges trying to display certain shapes that we wanted. As shown in Figure 12, we tried to draw a blue square at coordinate (0,0) on the screen, and the square did not exactly ended up on the top-left corner of the screen. Also, some of its pixels moved to spaces outside of the square.
+
+<img class="center-fit" src="../../assets/img/TTL_VGA_Project/Attempt_to_draw_block.png"/>
+<div class="caption">
+    Figure 12: Displaying Color Blocks
+</div> 
+
+Similar behavior occurs when we tried to draw the input from the mouse. While trying to draw a diagonal line across the bottom-right corner of the screen, the line seems to be scattered as shown in Figure 13.
+
+<img class="center-fit" src="../../assets/img/TTL_VGA_Project/Attempt_to_draw_line.jpg"/>
+<div class="caption">
+    Figure 12: Displaying Color Blocks
+</div> 
+
+We suspected that the mapping of the input address into the memory chip may be different from the mapping of the output address on the monitor. 
 # 5. Conclusions
+
+## 5.1 Reflection
+From a hardware perspective, we did finish the display circuit. We were able to read/write data from and into the memory chip and were very close to having a working circuit. We generally followed our timeline, but the debugging phase took much longer than we expected. A lesson learned for us was that we could definitely have made the timeline more compact and left more time for debugging.
+
+**Again, for more detailed technical report, code we used, and other related information, please refer to the [report](../../assets/pdf/SP23_Honors_Lab_Final_Reports.pdf)!**
+
+## 5.2 Extensions of this Project
+After debugging this circuit, we essentially have a VGA driver that can put the output of an Adruino onto a monitor. This opens up vast opportunities like programming a Tetris in the Arduino and play Tetris with a VGA monitor. If anyone is interested in continuing this project, please let me know through email (zexuany2@illinois.edu) as I am currently (Spring 2024 Semester) helping another team to achieve a similar project!
+
+## 5.3 Significance
+This project helped us understand the basic logic behind a VGA monitor and how to generate VGA signals. It also taught us how to interact with microcontrollers and memory chips. The knowledge learned here proven to be very useful for higher-level classes like ECE 385 (Digital Hardware Laboratory) which we would interact a lot with VGA signals. It has been a fun project with a considerable amount of time input on the display circuit side. We learned a lot both in a technical sense and about setting up timelines and project management.
 
 # 6. Works Cited
 

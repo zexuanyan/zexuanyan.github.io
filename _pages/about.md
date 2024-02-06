@@ -14,6 +14,7 @@ news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+# projects: true
 ---
 
 Hello! I am an undergraduate student studying Computer Engineering at the University of Illinois Urbana-Champaign (graduating in May 2026). My interest mainly lies in computer architecture, electrical hardware (MCUs, PCBs, etc.) design, and high performance computing. I love learning new things through hands-on work, and I believe doing projects is one of the best ways to learn! Checkout the Project Tab to see all projects I've done! 
