@@ -7,9 +7,9 @@ importance: 1
 category: Technical
 ---
 
-TACO (Tiled Architecture of Configurable Operators) is a custom FPGA we designed, verified, taped out, and brought up in the TSMC 65nm process for ECE 427. The chip combines a small reconfigurable fabric with hard arithmetic and memory blocks, plus a custom Verilog-to-bitstream flow that lets users compile, program, and test real RTL designs on silicon.
+TACO (Tiled Architecture of Configurable Operators) is a custom FPGA we designed, verified, taped out, and brought up in the TSMC 65nm process for ECE 427. The chip combines a small reconfigurable fabric with hard arithmetic and memory IPs, plus a custom Verilog-to-bitstream flow that lets users compile, program, and test real RTL designs on silicon. 
 
-This page is a concise summary of the project. For the full architecture, verification details, and bring-up methodology, see the [final report](../../assets/pdf/ECE_427_Project_Final_Report.pdf). Credit also goes to my teammates [Nitish Bhupathi Raju](https://www.linkedin.com/in/nitish-bhupathi-raju-209030323/), [Vinit Gupta](https://www.linkedin.com/in/vinit-gupta-86ab61222/), [Feiyang Liu](https://www.linkedin.com/in/feiyang-adam-liu-77a623270/), and [Rudra Thakkar](https://www.linkedin.com/in/thakkarrudrap/).
+This page is a concise summary of the project. For the full architecture, verification details, and bring-up methodology, see the [final report](../../assets/pdf/ECE_427_Project_Final_Report.pdf). Hugh shoutout to my amazing teammates [Nitish Bhupathi Raju](https://www.linkedin.com/in/nitish-bhupathi-raju-209030323/), [Vinit Gupta](https://www.linkedin.com/in/vinit-gupta-86ab61222/), [Feiyang Liu](https://www.linkedin.com/in/feiyang-adam-liu-77a623270/), and [Rudra Thakkar](https://www.linkedin.com/in/thakkarrudrap/)! We built this project from the ground up, starting with architecture definition and microarchitecture design, then moving through RTL implementation, verification, physical design, tapeout, and post-silicon bring-up. Most importantly, we had a lot of fun in this process! 
 
 <img class="center-fit" src="../../assets/img/TACO_FPGA_Project/die_shot.png"/>
 <div class="caption">
@@ -55,6 +55,7 @@ What worked on hardware:
 
 - Reliable JTAG communication, CSR readback, and fabric programming.
 - Basic mapped logic gates after correcting GPIO pin mappings.
+- Complex logic like 8-bit ALU passing on a synthesizable constrained random testbench on VCU118.
 - An 8-bit ALU running on TACO with switches as inputs and LEDs as outputs.
 - BRAM access from both JTAG and fabric logic.
 - MAC-unit validation with a mapped arithmetic circuit.
